@@ -65,7 +65,7 @@ fileprivate struct Claymorphism: View {
                     Text("Forget your password? ") +
                     
                     Text("Reset password")
-//                        .foregroundStyle(.blue)
+                        .foregroundColor(.blue)
                 )
                 .font(.footnote)
                 .fontWeight(.medium)
@@ -79,7 +79,7 @@ fileprivate struct Claymorphism: View {
     private func CustomTextField(image: String, placeholder: String) -> some View {
         HStack(alignment: .center, spacing: 8) {
             RoundedRectangle(cornerRadius: 8)
-//                .fill(.blue.secondary)
+                .fill(.blue.opacity(0.5))
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 32, height: 32)
                 .overlay(alignment: .center, content: {
@@ -129,8 +129,7 @@ fileprivate struct Glassmorphism: View {
                         
                         Image(systemName: "arrow.right")
                     }
-                    .font(.subheadline)
-//                    .fontWeight(.medium)
+                    .font(.subheadline.weight(.medium))
                 }
                 .padding()
                 .frame(width: 150, height: 150)
@@ -202,7 +201,7 @@ fileprivate struct Neumorphism: View {
                 .buttonStyle(NeumorphicButtonStyle(shape: .capsule, color: .gray))
             }
         }
-//        .fontWeight(.medium)
+        .font(.body.weight(.medium))
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.gray)
@@ -225,7 +224,7 @@ fileprivate struct Neumorphism: View {
     
     private var Seperator: some View {
         Rectangle()
-//            .fill(.black.quaternary)
+            .fill(.black.opacity(0.2))
             .frame(height: 1.5)
             .padding(.horizontal, -8)
     }
